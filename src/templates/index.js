@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-// import { Helmet } from 'react-helmet';
-import styled from 'styled-components';
+import { Helmet } from 'react-helmet';
+import styled, { createGlobalStyle } from 'styled-components';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #22262a;
+  }
+`;
 
 const App = ({ data }) => {
   const { projects } = data.markdownRemark.frontmatter;
@@ -12,7 +18,8 @@ const App = ({ data }) => {
   const [selectedProjectModal, setProjectModal] = useState(projects[0]);
   return (
     <div>
-
+      <Helmet />
+      <GlobalStyle />
       <Header>
           Projects
       </Header>
