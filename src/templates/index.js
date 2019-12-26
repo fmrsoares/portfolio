@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
@@ -12,7 +12,7 @@ const App = ({ data }) => {
   const [selectedProjectModal, setProjectModal] = useState(projects[0]);
   return (
     <div>
-      <Helmet bodyAttributes={{ style: 'background-color : #22262a' }} />
+
       <Header>
           Projects
       </Header>
