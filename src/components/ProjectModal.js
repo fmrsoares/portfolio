@@ -221,20 +221,24 @@ const StyledModal = styled(ReactModalAdapter)`
     border-radius: 40px 0px 0px 40px;
     background-color: #737883;
     @media(min-width: 0px) {
-      width: 20rem;
-      height: 80%;
+      width: 15rem;
+      height: auto;
+      max-height: 80%;
     }
     @media(min-width: 500px) {
       width: 25rem;
-      height: 80%;
+      height: auto;
+      max-height: 80%;
     }
     @media(min-width: 700px) {
       width: 40rem;
-      height: 80%;
+      height: auto;
+      max-height: 80%;
     }
     @media(min-width: 1200px) {
       width: 70rem;
       height: auto;
+      max-height: 80%;
     }
     &::-webkit-scrollbar {
       width: 6px;

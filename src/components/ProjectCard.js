@@ -18,7 +18,16 @@ const ProjectCard = ({ project, openProjectModal }) => (
 );
 
 ProjectCard.propTypes = {
-  project: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  project: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    logo: PropTypes.oneOfType([PropTypes.object]).isRequired,
+    description: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+    frameworks: PropTypes.arrayOf({
+      name: PropTypes.string.isRequired,
+      logo: PropTypes.oneOfType([PropTypes.object]).isRequired,
+    }),
+  }).isRequired,
   openProjectModal: PropTypes.func.isRequired,
 };
 

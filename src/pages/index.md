@@ -1,4 +1,10 @@
 ---
+portfolioLogo: ../assets/portfolioLogo.png
+contacts: 
+    githubLink: https://github.com/fmrsoares
+    linkedInLink: https://www.linkedin.com/in/fábio-soares-9b6a1a8b
+    email: fabiosoares0006@gmail.com
+    cvLink: https://drive.google.com/file/d/0B78WIch7nNTwQVBvSjNINFBLZ2hscV9KbUdaejdlNGJkUWlz/view?usp=sharing
 projects:
   - name: Potato Potahto
     description: >
@@ -16,7 +22,7 @@ projects:
         logo: ../assets/reactLogo.png
       - name: Gatsby
         logo: ../assets/gatsbyLogo.png
-    demoLink: https://nervous-einstein-34c7bf.netlify.com/
+    demoLink: https://potatopotahto.netlify.com/
   - name: Portfolio
     description: ...cenas...
     logo: ../assets/logoPlaceholder.png
@@ -30,6 +36,7 @@ projects:
         logo: ../assets/reactLogo.png
       - name: Gatsby
         logo: ../assets/gatsbyLogo.png
+    demoLink: https://fs-portfolio.netlify.com/
   - name: Swing Time
     description: ...cenas...
     logo: ../assets/logoPlaceholder.png

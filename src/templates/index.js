@@ -5,42 +5,65 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
+import ContactBar from '../components/ContactBar';
+import TopLogo from '../components/TopLogo';
 
 const GlobalStyle = createGlobalStyle`
   body {
     background-color: #22262a;
+    margin: 0px;
+    margin-right: 1rem;
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: white;
+      border-radius: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 12px;
+      background-color: white;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #22262a;
+    }
   }
 `;
 
 const App = ({ data }) => {
-  const { projects } = data.markdownRemark.frontmatter;
+  const { projects, contacts, portfolioLogo } = data.markdownRemark.frontmatter;
+  console.log(data.markdownRemark.frontmatter);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProjectModal, setProjectModal] = useState(projects[0]);
   return (
     <div>
       <Helmet />
       <GlobalStyle />
-      <Header>
+      <TopLogo portfolioLogo={portfolioLogo} />
+      <ContactBar contacts={contacts} />
+      <Projects>
+        <Header>
           Projects
-      </Header>
-      <ProjectsLayout>
-        {projects.map((project) => (
-          <ProjectCard
-            project={project}
-            openProjectModal={(selectedProject) => {
-              setModalIsOpen(true);
-              setProjectModal(selectedProject);
+        </Header>
+        <ProjectsLayout>
+          {projects.map((project) => (
+            <ProjectCard
+              id={project.name}
+              project={project}
+              openProjectModal={(selectedProject) => {
+                setModalIsOpen(true);
+                setProjectModal(selectedProject);
+              }}
+            />
+          ))}
+          <ProjectModal
+            modalIsOpen={modalIsOpen}
+            closeModal={() => {
+              setModalIsOpen(false);
             }}
+            project={selectedProjectModal}
           />
-        ))}
-        <ProjectModal
-          modalIsOpen={modalIsOpen}
-          closeModal={() => {
-            setModalIsOpen(false);
-          }}
-          project={selectedProjectModal}
-        />
-      </ProjectsLayout>
+        </ProjectsLayout>
+      </Projects>
+
     </div>
   );
 };
@@ -50,6 +73,19 @@ export const getProjectsQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
+        contacts {
+          githubLink
+          linkedInLink
+          email
+          cvLink
+        }
+        portfolioLogo {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          } 
+        }
         projects {
           frameworks {
             name
@@ -81,33 +117,22 @@ App.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.shape({
-        projects: PropTypes.arrayOf({
-          name: PropTypes.string.isRequired,
-          logo: PropTypes.shape({
-            childImageSharp: PropTypes.shape({
-              fluid: PropTypes.oneOfType([PropTypes.object]).isRequired,
-            }).isRequired,
-          }).isRequired,
-          description: PropTypes.string.isRequired,
-          tags: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-          frameworks: PropTypes.arrayOf({
-            name: PropTypes.string.isRequired,
-            logo: PropTypes.shape({
-              childImageSharp: PropTypes.shape({
-                fluid: PropTypes.oneOfType([PropTypes.object]).isRequired,
-              }).isRequired,
-            }).isRequired,
-          }),
-        }),
+        portfolioLogo: PropTypes.oneOfType([PropTypes.object]).isRequired,
+        contacts: PropTypes.oneOfType([PropTypes.object]).isRequired,
+        projects: PropTypes.oneOfType([PropTypes.array]).isRequired,
       }).isRequired,
     }).isRequired,
   }).isRequired,
 };
 
+const Projects = styled.div`
+  margin-left: 5rem;
+`;
+
 const ProjectsLayout = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 
 const Header = styled.div`
