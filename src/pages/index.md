@@ -49,6 +49,14 @@ projects:
         logo: ../assets/reactLogo.png
       - name: Next.js
         logo: ../assets/nextLogo.png
+  - name: Color Jam
+    description: ...cenas...
+    logo: ../assets/logoPlaceholder.png
+    tags:
+      - Unity
+    frameworks:
+      - name: Unity
+        logo: ../assets/unity.png
   - name: Trading Bot
     description: ...cenas...
     logo: ../assets/logoPlaceholder.png

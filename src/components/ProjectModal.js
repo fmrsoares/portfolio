@@ -86,7 +86,6 @@ const ProjectButton = styled.button`
   padding: 0.5rem;
   background-color: hsla(0,0%,100%,.8);
   border: none;
-  border-radius: 3px;
   cursor: pointer;
   transition: all .3s;
   align-items: center;
@@ -111,10 +110,8 @@ const ProjectAbout = styled.p`
     &::-webkit-scrollbar {
       width: 6px;
       background-color: white;
-      border-radius: 3px;
     }
     &::-webkit-scrollbar-thumb {
-      border-radius: 12px;
       background-color: white;
     }
     &::-webkit-scrollbar-track {
@@ -218,7 +215,6 @@ const StyledModal = styled(ReactModalAdapter)`
     transform: translate(-50%, -50%);
     overflow: auto;
     width: 70rem;
-    border-radius: 40px 0px 0px 40px;
     background-color: #737883;
     @media(min-width: 0px) {
       width: 15rem;
@@ -243,10 +239,8 @@ const StyledModal = styled(ReactModalAdapter)`
     &::-webkit-scrollbar {
       width: 6px;
       background-color: white;
-      border-radius: 3px;
     }
     &::-webkit-scrollbar-thumb {
-      border-radius: 12px;
       background-color: white;
     }
     &::-webkit-scrollbar-track {

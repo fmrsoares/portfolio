@@ -16,10 +16,8 @@ const GlobalStyle = createGlobalStyle`
     &::-webkit-scrollbar {
       width: 6px;
       background-color: white;
-      border-radius: 3px;
     }
     &::-webkit-scrollbar-thumb {
-      border-radius: 12px;
       background-color: white;
     }
     &::-webkit-scrollbar-track {
@@ -132,7 +130,7 @@ const Projects = styled.div`
 const ProjectsLayout = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: start;
 `;
 
 const Header = styled.div`
