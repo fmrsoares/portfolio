@@ -140,5 +140,6 @@ const Header = styled.div`
   font-weight: bold;
   letter-spacing: 2px;
   margin: 1rem;
+  text-align: center;
 `;
 export default App;

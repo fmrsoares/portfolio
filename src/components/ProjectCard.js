@@ -6,6 +6,10 @@ import ProjectCardIcon from './ProjectCardIcon';
 
 const ProjectCard = ({ project, openProjectModal }) => (
   <Container onClick={() => openProjectModal(project)}>
+    <BorderHoverLeftTopMain />
+    <BorderHoverRightTopMain />
+    <BorderHoverLeftBottomMain />
+    <BorderHoverRightBottomMain />
     <Img
       fluid={project.logo.childImageSharp.fluid}
       alt={project.name}
@@ -36,15 +40,17 @@ const Container = styled.div`
   box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
   cursor: pointer;
   transition: 0.4s;
+  position: relative;
   &:hover {
     background-color: #243459;
-    transform: scale(1.1, 1.1);
+    border-left: 10px solid white;
+    border-right: 10px solid white;
     box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
   }
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 1rem;
+  margin: 1.5rem;
   @media(min-width: 0px) {
     width: 90%;
   }
@@ -55,6 +61,60 @@ const Container = styled.div`
     width: 30%;
   }
 `;
+
+const BorderHoverLeftTopMain = styled.div`
+  display: none;
+  border-top: 10px solid white;
+  position: absolute;
+  right: 0;
+  left: 95%;
+  top: 0;
+  transition: 0.4s;
+  ${Container}:hover &{
+    display: block;
+  }
+`;
+
+const BorderHoverRightTopMain = styled.div`
+  display: none;
+  border-bottom: 10px solid white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 95%;
+  transition: 0.4s;
+
+  ${Container}:hover &{
+    display: block;
+  }
+`;
+
+const BorderHoverLeftBottomMain = styled.div`
+  display: none;
+  border-top: 10px solid white;
+  position: absolute;
+  right: 95%;
+  left: 0;
+  top: 0;
+  transition: 0.4s;
+  ${Container}:hover &{
+    display: block;
+  }
+`;
+
+const BorderHoverRightBottomMain = styled.div`
+  display: none;
+  border-bottom: 10px solid white;
+  position: absolute;
+  bottom: 0;
+  right: 95%;
+  left: 0;
+  transition: 0.4s;
+  ${Container}:hover &{
+    display: block;
+  }
+`;
+
 
 const TeckStackWrapper = styled.div`
    background-color: #243459;
