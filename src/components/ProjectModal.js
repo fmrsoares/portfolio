@@ -43,10 +43,10 @@ const ProjectModal = ({ modalIsOpen, closeModal, project }) => (
             <ProjectButtonText>Demo</ProjectButtonText>
           </ProjectButton>
           <ProjectButton
-            disabled
+            disabled={!project.srcLink}
             type="button"
             onClick={() => {
-              const win = window.open(project.githubLink, '_blank');
+              const win = window.open(project.srcLink, '_blank');
               win.focus();
             }}
           >

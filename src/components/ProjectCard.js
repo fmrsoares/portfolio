@@ -41,8 +41,10 @@ const Container = styled.div`
   cursor: pointer;
   transition: 0.4s;
   position: relative;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
   &:hover {
-    background-color: #243459;
+    transform: scale(0.98);
     border-left: 10px solid white;
     border-right: 10px solid white;
     box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
@@ -50,7 +52,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  margin: 1.5rem;
+  margin: 1rem;
   @media(min-width: 0px) {
     width: 90%;
   }
@@ -59,59 +61,6 @@ const Container = styled.div`
   }
   @media(min-width: 1200px) {
     width: 30%;
-  }
-`;
-
-const BorderHoverLeftTopMain = styled.div`
-  display: none;
-  border-top: 10px solid white;
-  position: absolute;
-  right: 0;
-  left: 95%;
-  top: 0;
-  transition: 0.4s;
-  ${Container}:hover &{
-    display: block;
-  }
-`;
-
-const BorderHoverRightTopMain = styled.div`
-  display: none;
-  border-bottom: 10px solid white;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 95%;
-  transition: 0.4s;
-
-  ${Container}:hover &{
-    display: block;
-  }
-`;
-
-const BorderHoverLeftBottomMain = styled.div`
-  display: none;
-  border-top: 10px solid white;
-  position: absolute;
-  right: 95%;
-  left: 0;
-  top: 0;
-  transition: 0.4s;
-  ${Container}:hover &{
-    display: block;
-  }
-`;
-
-const BorderHoverRightBottomMain = styled.div`
-  display: none;
-  border-bottom: 10px solid white;
-  position: absolute;
-  bottom: 0;
-  right: 95%;
-  left: 0;
-  transition: 0.4s;
-  ${Container}:hover &{
-    display: block;
   }
 `;
 
@@ -133,7 +82,6 @@ const ProjectTitle = styled.div`
   flex:1;
   font-family: Staatliches;
   color: #E2E6EC;
-  
   font-weight: bold;
   letter-spacing: 1.5px;
   margin-left: 2rem;
@@ -142,6 +90,58 @@ const ProjectTitle = styled.div`
   }
   @media(min-width: 450px) {
     font-size: 1.8rem;
+  }
+`;
+
+const BorderHoverLeftTopMain = styled.div`
+  opacity: 0;
+  border-top: 10px solid white;
+  position: absolute;
+  right: 0;
+  left: 95%;
+  top: 0;
+  transition: 0.4s;
+  ${Container}:hover &{
+    opacity: 1;
+  }
+`;
+
+const BorderHoverRightTopMain = styled.div`
+  opacity: 0;
+  border-bottom: 10px solid white;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 95%;
+  transition: 0.4s;
+  ${Container}:hover &{
+    opacity: 1;
+  }
+`;
+
+const BorderHoverLeftBottomMain = styled.div`
+  opacity: 0;
+  border-top: 10px solid white;
+  position: absolute;
+  right: 95%;
+  left: 0;
+  top: 0;
+  transition: 0.4s;
+  ${Container}:hover &{
+    opacity: 1;
+  }
+`;
+
+const BorderHoverRightBottomMain = styled.div`
+  opacity: 0;
+  border-bottom: 10px solid white;
+  position: absolute;
+  bottom: 0;
+  right: 95%;
+  left: 0;
+  transition: 0.4s;
+  ${Container}:hover &{
+    opacity: 1;
   }
 `;
 

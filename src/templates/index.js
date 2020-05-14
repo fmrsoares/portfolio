@@ -13,8 +13,8 @@ const GlobalStyle = createGlobalStyle`
     background-color: #22262a;
     margin: 0px;
     margin-right: 1rem;
-    &::-webkit-scrollbar {
-      width: 6px;
+    &::-webkit-scrollbar { 
+      width: 6px; 
       background-color: white;
     }
     &::-webkit-scrollbar-thumb {
@@ -28,7 +28,6 @@ const GlobalStyle = createGlobalStyle`
 
 const App = ({ data }) => {
   const { projects, contacts, portfolioLogo } = data.markdownRemark.frontmatter;
-  console.log(data.markdownRemark.frontmatter);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedProjectModal, setProjectModal] = useState(projects[0]);
   return (
@@ -87,7 +86,7 @@ export const getProjectsQuery = graphql`
         projects {
           frameworks {
             name
-            logo {
+            logo { 
               childImageSharp {
                 fluid {
                   ...GatsbyImageSharpFluid_tracedSVG
@@ -98,6 +97,7 @@ export const getProjectsQuery = graphql`
           name
           tags
           demoLink
+          srcLink
           logo {
             childImageSharp {
               fluid {
@@ -130,7 +130,7 @@ const Projects = styled.div`
 const ProjectsLayout = styled.div`
   display: flex;
   flex-flow: row wrap;
-  justify-content: start;
+  justify-content: space-around;
 `;
 
 const Header = styled.div`

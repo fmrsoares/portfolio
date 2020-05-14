@@ -8,9 +8,7 @@ contacts:
 projects:
   - name: Potato Potahto
     description: >
-      For this project I worked with things like Authentication with OAuth2, PayPal API, Database Design, UI & UX, and I used Vue and Vuex to make the project a Single Page Application.
-
-      Victor from Adventure Cord approached me to develop a website for his Discord bot where users can log in with their Discord accounts and view their profile stats, view other users's stats, read news and updates for the bot directly from the team and purchase products to use within the bot. Since I had a lot of time to build the project and wanted to learn as much as possible, I decided to build everything from scratch.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a urna et ligula lacinia accumsan ac non elit. Fusce vestibulum quam urna, et imperdiet sem facilisis vel. Curabitur id purus fringilla, tincidunt nunc nec, eleifend velit. Sed urna arcu, ultricies ac enim euismod, lacinia cursus eros. Mauris vestibulum sodales ornare. In in est rhoncus, aliquet sapien non, mollis ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ultrices maximus est. Aliquam tempus interdum rutrum. Fusce maximus dapibus consectetur. In sollicitudin felis quis tristique ultricies. Nullam sed sapien ut nisl fermentum pellentesque. Ut a malesuada dui.
     logo: ../assets/potatoPotahtoLogo.png
     tags:
       - HTML, CSS & Javascript
@@ -24,7 +22,7 @@ projects:
         logo: ../assets/gatsbyLogo.png
     demoLink: https://potatopotahto.netlify.com/
   - name: Portfolio
-    description: ...cenas...
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a urna et ligula lacinia accumsan ac non elit. Fusce vestibulum quam urna, et imperdiet sem facilisis vel. Curabitur id purus fringilla, tincidunt nunc nec, eleifend velit. Sed urna arcu, ultricies ac enim euismod, lacinia cursus eros. Mauris vestibulum sodales ornare. In in est rhoncus, aliquet sapien non, mollis ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ultrices maximus est. Aliquam tempus interdum rutrum. Fusce maximus dapibus consectetur. In sollicitudin felis quis tristique ultricies. Nullam sed sapien ut nisl fermentum pellentesque. Ut a malesuada dui.
     logo: ../assets/logoPlaceholder.png
     tags:
       - HTML, CSS & Javascript
@@ -37,8 +35,9 @@ projects:
       - name: Gatsby
         logo: ../assets/gatsbyLogo.png
     demoLink: https://fs-portfolio.netlify.com/
+    srcLink: https://github.com/fmrsoares/portfolio
   - name: Swing Time
-    description: ...cenas...
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a urna et ligula lacinia accumsan ac non elit. Fusce vestibulum quam urna, et imperdiet sem facilisis vel. Curabitur id purus fringilla, tincidunt nunc nec, eleifend velit. Sed urna arcu, ultricies ac enim euismod, lacinia cursus eros. Mauris vestibulum sodales ornare. In in est rhoncus, aliquet sapien non, mollis ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ultrices maximus est. Aliquam tempus interdum rutrum. Fusce maximus dapibus consectetur. In sollicitudin felis quis tristique ultricies. Nullam sed sapien ut nisl fermentum pellentesque. Ut a malesuada dui.
     logo: ../assets/logoPlaceholder.png
     tags:
       - HTML, CSS & Javascript
@@ -50,7 +49,7 @@ projects:
       - name: Next.js
         logo: ../assets/nextLogo.png
   - name: Color Jam
-    description: ...cenas...
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a urna et ligula lacinia accumsan ac non elit. Fusce vestibulum quam urna, et imperdiet sem facilisis vel. Curabitur id purus fringilla, tincidunt nunc nec, eleifend velit. Sed urna arcu, ultricies ac enim euismod, lacinia cursus eros. Mauris vestibulum sodales ornare. In in est rhoncus, aliquet sapien non, mollis ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ultrices maximus est. Aliquam tempus interdum rutrum. Fusce maximus dapibus consectetur. In sollicitudin felis quis tristique ultricies. Nullam sed sapien ut nisl fermentum pellentesque. Ut a malesuada dui.
     logo: ../assets/logoPlaceholder.png
     tags:
       - Unity
@@ -58,7 +57,7 @@ projects:
       - name: Unity
         logo: ../assets/unity.png
   - name: Trading Bot
-    description: ...cenas...
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a urna et ligula lacinia accumsan ac non elit. Fusce vestibulum quam urna, et imperdiet sem facilisis vel. Curabitur id purus fringilla, tincidunt nunc nec, eleifend velit. Sed urna arcu, ultricies ac enim euismod, lacinia cursus eros. Mauris vestibulum sodales ornare. In in est rhoncus, aliquet sapien non, mollis ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ultrices maximus est. Aliquam tempus interdum rutrum. Fusce maximus dapibus consectetur. In sollicitudin felis quis tristique ultricies. Nullam sed sapien ut nisl fermentum pellentesque. Ut a malesuada dui.
     logo: ../assets/logoPlaceholder.png
     tags:
       - Python3.7
